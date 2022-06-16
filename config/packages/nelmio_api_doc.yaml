@@ -1,0 +1,16 @@
+nelmio_api_doc:
+    documentation:
+        servers:
+            - url: https://localhost:8000/api/renvoie_tout
+              description: API over HTTP returning all the persons
+            - url: https://localhost:8000/api/sauvegarde_nouvelle/{prenom}/{nom}/{date_naissance}
+              description: API over HTTP insering a new person with datas given in GET method by the url
+        info:
+            title: Edouard's App for technical test for WA society
+            description: This app has 2 routes, one for creating a person, and one for reading all persons
+            version: 1.0.0
+    areas: # to filter documented areas
+        path_patterns:
+            - ^/api(?!/doc$) # Accepts routes under /api except /api/doc
+        host_patterns: # document only routes with a host of the form api.*
+            - ^api\.

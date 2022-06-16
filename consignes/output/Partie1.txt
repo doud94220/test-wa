@@ -1,0 +1,42 @@
+Partie 1 :
+
+1) //book
+
+2) book[@type='roman']/title
+
+3) count(book[@type='bd'])
+
+4) Renvoie les ancêtres et l'élément lui-même d'un bloc library fils d'un bloc library => Renvoie donc 2 élements :
+
+- toute la structure présente dans le document c'est à dire :
+<library>
+<book>
+<title>toto1</title>
+<author>titi</author>
+</book>
+<book type="doc">
+<title>toto2</title>
+<author>titi</author>
+</book>
+<book type="roman">
+<title>toto3</title>
+<author>titi</author>
+</book>
+<book type="bd">
+<title>toto4</title>
+<author>titi2</author>
+</book>
+<library>
+<book type="roman">
+<title>toto5</title>
+<author>titi</author>
+</book>
+</library>
+
+- le bloc library fils d elibray (l'élément lui-même):
+ <library>
+<book type="roman">
+<title>toto5</title>
+<author>titi</author>
+</book>
+</library>
